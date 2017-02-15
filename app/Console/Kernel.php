@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\find_dupes::class,
+        Commands\do_lottery::class
     ];
 
     /**
