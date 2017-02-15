@@ -135,7 +135,7 @@ class do_lottery extends Command
         $this->info("---------------------");
         $i = 1;
         foreach($applicants as $student){
-            $this->info($i . " " . $student["id"] . " " . $student['notes']);
+            $this->info($i . " " . $student["id"] . " (".$student['name'].") " . $student['notes']);
             $student["pick_order"] = $i;
             $student["grade"] = $grade;
             $this->add_result_to_database($student);
