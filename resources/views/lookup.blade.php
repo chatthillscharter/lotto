@@ -9,7 +9,7 @@
                 <div class="panel-body">
                     Your lottery number: {{$lotto->lotto_id}} was chosen as #{{$lotto->pick_order}} in the {{$lotto->grade}} grade. There were {{$threshold->seats}}. 
                     @if($threshold->seats >= $lotto->pick_order)
-                        Congratulations. Please use [this link](http://doodle.com/poll/a5aef96wmqhizsu6) to schedule a time to deliver your enrollment documents. The school will also contact you shortly. Once contacted, you have 24 hours to contact the school and schedule a time to drop off your information. [Schedule a time now.](http://doodle.com/poll/a5aef96wmqhizsu6)
+                        Congratulations. Please <a href="http://doodle.com/poll/a5aef96wmqhizsu6"> schedule a time to deliver your enrollment documentsM/a>. The school will also contact you shortly. Once contacted, you have 24 hours to contact the school and schedule a time to drop off your information.<a href="http://doodle.com/poll/a5aef96wmqhizsu6">Schedule a time now.</a>
                     @else
                         Your child has been placed on our wait list. We will call you if a seat becomes available.
                     @endif
