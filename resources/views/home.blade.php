@@ -20,7 +20,7 @@
                         <div class="form-group row">
                             <label for="k" class="col-sm-2 form-control-label">K Seats</label>
                             <div class="col-sm-10">
-                                <input type="text" name="seats['k']" 
+                                <input type="text" name="seats[k]" 
                                 class="form-control" id="k" value="{{$seats['k'][0]->seats or 0}}"
                                 placeholder="# of Seats">
                             </div>
@@ -28,13 +28,13 @@
                         <div class="form-group row">
                             <label for="1st" class="col-sm-2 form-control-label">1st Seats</label>
                             <div class="col-sm-10">
-                                <input type="text" value="{{$seats['1st'][0]->seats or 0}}" name="seats['1st']" class="form-control" id="1st" placeholder="# of Seats">
+                                <input type="text" value="{{$seats['1st'][0]->seats or 0}}" name="seats[1st]" class="form-control" id="1st" placeholder="# of Seats">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="1st" class="col-sm-2 form-control-label">2nd Seats</label>
                             <div class="col-sm-10">
-                                <input type="text" value="{{$seats['2nd'][0]->seats or 0}}" name="seats['2nd']" class="form-control" id="2nd" placeholder="# of Seats">
+                                <input type="text" value="{{$seats['2nd'][0]->seats or 0}}" name="seats[2nd]" class="form-control" id="2nd" placeholder="# of Seats">
                             </div>
                         </div>
                         <div class="form-group row">

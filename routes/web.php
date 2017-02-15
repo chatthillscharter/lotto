@@ -18,11 +18,17 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     $lotto = Lottery::all()->groupBy('grade');
     $seats = Seats::all()->groupBy('grade');
-    return view('welcome',['lotto' => $lotto, 'thresholds' =>$seats]);
+    if($lotto->count() > 0){
+      return view('welcome',['lotto' => $lotto, 'thresholds' =>$seats]);
+    } else {
+      return view ('wait');
+    }
 });
 Route::get('/lookup', function(Request $request) {
+
   if($lotto = Lottery::where('lotto_id',$request->input('lotto_id'))->first()){
-    return view('lookup',['lotto' => $lotto]);
+    $threshold = Seats::where('grade', $lotto->grade)->first();
+    return view('lookup',['lotto' => $lotto,'threshold'=>$threshold]);
   } else {
     Session::flash('message', "That's an invalid lottery number. Please try again.");
     return Redirect::back();
