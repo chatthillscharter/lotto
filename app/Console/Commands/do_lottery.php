@@ -92,8 +92,10 @@ class do_lottery extends Command
         //if the student has been drawn and is within 5 seats of the threshold, 
         //add their family members too
         if($i < $threshold->seats+5){
+          $this->info("$i is less than threshold+5. Adding family members");
           $this->add_family_members($applicant);
         } 
+        $i++;
       }
       $this->info("--------------------");
       return $grade;
